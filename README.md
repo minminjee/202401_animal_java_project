@@ -6,7 +6,8 @@
 * 사람들과의 커뮤티니 활동을 할  수 있습니다.
 
 ### 시연 영상
-https://github.com/minminjee/202401_animal_java_project/assets/157664207/ca69f86e-e0a0-4ba2-9014-669b3b35a5d3
+https://github.com/minminjee/202401_animal_java_project/assets/157664207/aebf1d3d-7916-4626-a89f-a2a3061ce38c
+
 
 
   
