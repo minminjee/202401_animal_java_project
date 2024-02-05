@@ -20,3 +20,51 @@ api를 매칭하며 새로운 key에 이미지 사진 배열 저장함
 **수정 후 로직 비교**    
 다시 배열에서 이미지를 가져오기 때문에 속소가 느리지만
 서버로 json 형태로 전송이 간편
+
+```
+$(document).ready(function(){
+		//이미지 API 가져오기
+		$.ajax({
+			async : true,
+			type : 'GET',
+			url : 'animalPhotoAPI',
+			contentType : "application/json; charset=UTF-8",
+			success : function(photoData){
+				console.log("photo success");
+				
+				//정보API 가져오기
+				$.ajax({
+					async : true,
+	                type : 'GET',
+	                url : 'animalInfoAPI',
+	                contentType : "application/json, charset=UTF-8",
+	                success : function(infoData){
+	                    console.log("info success");
+	                    
+									var parsedPhotoData = JSON.parse(photoData); //이미지 API json parsing
+	                var parsedInfoData = JSON.parse(infoData); //정보 API json parsing
+	
+	                var photoRows = parsedPhotoData.TbAdpWaitAnimalPhotoView.row; //이미지 API key find
+	                var infoRows = parsedInfoData.TbAdpWaitAnimalView.row; //정보 API key find
+	
+	                 //이미지 API와 정보 API 동물번호를 기준으로 매칭하여 
+	                 //정보 API에 이미지 정보들을 저장하는 key 생성
+
+	                    for(var i=0; i<infoRows.length; i++){
+	                        var animalInfoNo = infoRows[i].ANIMAL_NO;
+	                        let imageArr = [];
+	                        for(var j=0; j<photoRows.length; j++){
+	                            var animalPhotoNo = photoRows[j].ANIMAL_NO;
+	                            if(animalInfoNo == animalPhotoNo){
+	                                imageArr.push(photoRows[j].PHOTO_URL);
+	                                //break;
+	                            }
+	                        }
+	                        infoRows[i].PHOTO_LIST = imageArr;
+	                    }
+	                    
+	                    var jsonFile = JSON.stringify(infoRows);
+	                   
+	                    //브라우저 로컬스토리지 내 api 모든 정보 저장
+	                    localStorage.setItem('jsonFileAll',jsonFile);
+```
