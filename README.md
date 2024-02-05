@@ -21,8 +21,10 @@
 ### ERD
 <img src="https://github.com/minminjee/animal_java_project_24.01/assets/157664207/85f162d3-91fb-4458-b4e5-10beb604f0d6">
 
+### 기술 스택
 
-### 1. 공공 데이터 api 파싱    
+
+#### 1. 공공 데이터 api 파싱    
 api를 사용하기 위해서는 내가 필요한 형식로 정보를 받고 파싱해서 사용한다.    
 제공하는 API 형식 중에 내가 구현하려는 데이터에는 key :value가 적합하여서  JSON형태로 받았다.     
 넘겨주는 데이터는 형식은 json이지만 String으로 되어있어서 데이터에 접근하기 위해서 파싱을 하였다.     
@@ -86,7 +88,7 @@ $(document).ready(function(){
 	                    //브라우저 로컬스토리지 내 api 모든 정보 저장
 	                    localStorage.setItem('jsonFileAll',jsonFile);
 ```
-### 2. session 값 활용하기   
+#### 2. session 값 활용하기   
 클라이언트의 정보를 저장하기 위해서는 
 
 1. 매번 DB를 다녀오는 방법 > 더 많은 데이터를 필요로 할때
