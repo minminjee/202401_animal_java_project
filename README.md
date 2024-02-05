@@ -5,6 +5,8 @@
 * 입양 전 관심리스트를 만들어 관리 할 수 있습니다.    
 * 사람들과의 커뮤티니 활동을 할  수 있습니다.
 
+### 시연 영상
+<img src ="https://github.com/minminjee/202401_animal_java_project/assets/157664207/7071616d-bded-4eda-9960-0b3babf9d1d8">
   
 ### 개발 구상도
 <img src ="https://github.com/minminjee/animal_java_project_24.01/assets/157664207/7871258a-3466-498a-a129-0d96c4dd9ccb">
