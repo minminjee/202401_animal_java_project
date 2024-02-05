@@ -4,12 +4,24 @@
 * 서울시에서 제공하는 공공데이터로 유기동물의 정보와 현황을 알 수 있고 하루 1회 업데이트 됩니다.    
 * 입양 전 관심리스트를 만들어 관리 할 수 있습니다.    
 * 사람들과의 커뮤티니 활동을 할  수 있습니다.
+
+  
 ### 개발 구상도
 <img src ="https://github.com/minminjee/animal_java_project_24.01/assets/157664207/7871258a-3466-498a-a129-0d96c4dd9ccb">
+
+
 ### 개발 구상도_상세
 <img src ="https://github.com/minminjee/animal_java_project_24.01/assets/157664207/c9d0fd3a-ae04-4438-b7b3-65a5fd6860e7">
+
+
 ### 개발동기
 <img src ="https://github.com/minminjee/animal_java_project_24.01/assets/157664207/9e84e493-d736-47e8-8b36-806b1a4897ee">
+
+
+### ERD
+<img src="https://github.com/minminjee/animal_java_project_24.01/assets/157664207/85f162d3-91fb-4458-b4e5-10beb604f0d6">
+
+
 ### 1. 공공 데이터 api 파싱    
 api를 사용하기 위해서는 내가 필요한 형식로 정보를 받고 파싱해서 사용한다.    
 제공하는 API 형식 중에 내가 구현하려는 데이터에는 key :value가 적합하여서  JSON형태로 받았다.     
