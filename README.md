@@ -68,3 +68,46 @@ $(document).ready(function(){
 	                    //브라우저 로컬스토리지 내 api 모든 정보 저장
 	                    localStorage.setItem('jsonFileAll',jsonFile);
 ```
+### 2. session 값 활용하기   
+클라이언트의 정보를 저장하기 위해서는 
+
+1. 매번 DB를 다녀오는 방법
+   
+    >> 더 많은 데이터를 필요로 할때
+    
+2. 클라이언트에 저장하는 방법 _ 쿠키값
+    
+    >> 중요하지 않은 정보들만 기록
+    
+3. 서버에 저장하는 방법 _ session값
+    
+    >> 로그인 정보 중요한 정보
+    
+나는 로그인 된 정보를 유지되고 있는 것처럼 구현하고자 sesion값 지정으로 구현하였다.
+로그인 정보 및 비회원과 회원의 유효성으로 접근 제한 기능들을 필요했다.
+view 부분에서는 변수로 접근이 가능하다.
+session은 모든 페이지에서 사용할 수 있는 멤버 변수와도 같다.
+그래서 선언(변수값 변경)을 여러 곳에서 할 시 복잡해지거나 값이 변경될 수 있으므로 선언에 신경 쓰도록하자.
+이번 프로젝트에서는 1곳에서 선언하고 1곳에서 재정의 하였다.
+
+
+```
+	if(session.getAttribute("login")!=null) {
+			session.removeAttribute("login");
+		}
+		
+		MemberVO mvo = mservice.login(memberVo);
+		
+		if(mvo!=null) { // 로그인 성공
+			session.setAttribute("login", mvo);
+
+```
+
+```
+<c:if test="${login != null }">
+                  <a href="mypage"> <span class="nickname">${login.member_nickname }님 어서오세요.</span></a>
+                    <button class="member-logoutbtn"><a href="logout">
+                    <span class="btn1">로그아웃</span><br>
+                    </a></button>
+             </c:if>
+```
