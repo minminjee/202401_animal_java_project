@@ -8,6 +8,8 @@
 <img src ="https://github.com/minminjee/animal_java_project_24.01/assets/157664207/7871258a-3466-498a-a129-0d96c4dd9ccb">
 ### 개발 구상도_상세
 <img src ="https://github.com/minminjee/animal_java_project_24.01/assets/157664207/c9d0fd3a-ae04-4438-b7b3-65a5fd6860e7">
+### 개발동기
+<img src ="https://github.com/minminjee/animal_java_project_24.01/assets/157664207/9e84e493-d736-47e8-8b36-806b1a4897ee">
 ### 1. 공공 데이터 api 파싱    
 api를 사용하기 위해서는 내가 필요한 형식로 정보를 받고 파싱해서 사용한다.    
 제공하는 API 형식 중에 내가 구현하려는 데이터에는 key :value가 적합하여서  JSON형태로 받았다.     
